@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2020-09-30T08:34:00.915Z</updated>
+  <updated>2020-09-30T09:46:10.424Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Java</title>
-    <link href="http://example.com/2020/09/24/java/"/>
-    <id>http://example.com/2020/09/24/java/</id>
-    <published>2020-09-24T10:14:59.000Z</published>
-    <updated>2020-09-30T08:34:00.915Z</updated>
+    <title>C#</title>
+    <link href="http://example.com/2020/09/30/c/"/>
+    <id>http://example.com/2020/09/30/c/</id>
+    <published>2020-09-30T09:37:43.000Z</published>
+    <updated>2020-09-30T09:46:10.424Z</updated>
     
     
       
@@ -38,12 +38,103 @@
     
     
     
-    <category term="Markdown" scheme="http://example.com/categories/Markdown/"/>
+    <category term="C#" scheme="http://example.com/categories/C/"/>
     
     
-    <category term="Typora" scheme="http://example.com/tags/Typora/"/>
+    <category term="C#" scheme="http://example.com/tags/C/"/>
     
-    <category term="Markdown" scheme="http://example.com/tags/Markdown/"/>
+  </entry>
+  
+  <entry>
+    <title>C++</title>
+    <link href="http://example.com/2020/09/30/c/"/>
+    <id>http://example.com/2020/09/30/c/</id>
+    <published>2020-09-30T09:36:55.000Z</published>
+    <updated>2020-09-30T09:46:10.507Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+       </summary>
+        
+      
+    
+    
+    
+    <category term="C++" scheme="http://example.com/categories/C/"/>
+    
+    
+    <category term="C++" scheme="http://example.com/tags/C/"/>
+    
+    <category term="服务器" scheme="http://example.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C</title>
+    <link href="http://example.com/2020/09/30/c/"/>
+    <id>http://example.com/2020/09/30/c/</id>
+    <published>2020-09-30T09:34:09.000Z</published>
+    <updated>2020-09-30T09:46:10.646Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+       </summary>
+        
+      
+    
+    
+    
+    <category term="C" scheme="http://example.com/categories/C/"/>
+    
+    
+    <category term="服务器" scheme="http://example.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    <category term="C" scheme="http://example.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java</title>
+    <link href="http://example.com/2020/09/24/java/"/>
+    <id>http://example.com/2020/09/24/java/</id>
+    <published>2020-09-24T10:14:59.000Z</published>
+    <updated>2020-09-30T09:46:10.449Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+       </summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="http://example.com/categories/Java/"/>
+    
+    
+    <category term="服务器" scheme="http://example.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    <category term="Java" scheme="http://example.com/tags/Java/"/>
     
   </entry>
   
