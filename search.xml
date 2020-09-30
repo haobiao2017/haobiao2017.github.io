@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>cpu</title>
+      <link href="2020/09/30/cpu/"/>
+      <url>2020/09/30/cpu/</url>
+      
+        <content type="html"><![CDATA[<h1 id="一、什么是CPU缓存"><a href="#一、什么是CPU缓存" class="headerlink" title="一、什么是CPU缓存"></a>一、什么是CPU缓存</h1><h2 id="1-CPU缓存的来历"><a href="#1-CPU缓存的来历" class="headerlink" title="1. CPU缓存的来历"></a>1. CPU缓存的来历</h2><p>众所周知,CPU是计算机的大脑，它负责执行程序的指令，而内存负责存数据, 包括程序自身的数据。在很多年前，CPU的频率与内存总线的频率在同一层面上。内存的访问速度仅比寄存器慢一些。但是，这一局面在上世纪90年代被打破了。CPU的频率大大提升，但内存总线的频率与内存芯片的性能却没有得到成比例的提升。并不是因为造不出更快的内存，只是因为太贵了。内存如果要达到目前CPU那样的速度，那么它的造价恐怕要贵上好几个数量级。所以，CPU的运算速度要比内存读写速度快很多，这样会使CPU花费很长的时间等待数据的到来或把数据写入到内存中。所以，<strong>为了解决CPU运算速度与内存读写速度不匹配的矛盾</strong>，就出现了CPU缓存。</p><h2 id="2-CPU缓存的概念"><a href="#2-CPU缓存的概念" class="headerlink" title="2. CPU缓存的概念"></a>2. CPU缓存的概念</h2><p><strong>CPU缓存是位于CPU与内存之间的临时数据交换器，它的容量比内存小的多但是交换速度却比内存要快得多。CPU缓存一般直接跟CPU芯片集成或位于主板总线互连的独立芯片上。</strong></p><p>为了简化与内存之间的通信，高速缓存控制器是针对数据块，而不是字节进行操作的。高速缓存其实就是一组称之为<strong>缓存行</strong>(Cache Line)的固定大小的数据块组成的，典型的一行是<font color="red">64</font>字节。</p><h2 id="3-CPU缓存的意义"><a href="#3-CPU缓存的意义" class="headerlink" title="3. CPU缓存的意义"></a>3. CPU缓存的意义</h2><p>CPU往往需要重复处理相同的数据、重复执行相同的指令，如果这部分数据、指令CPU能在CPU缓存中找到，CPU就不需要从内存或硬盘中再读取数据、指令，从而减少了整机的响应时间。所以，缓存的意义满足以下两种<strong>局部性原理</strong>：</p><ul><li><strong>时间局部性（Temporal Locality）</strong>：如果一个信息项正在被访问，那么在近期它很可能还会被再次访问。</li><li><strong>空间局部性（Spatial Locality）</strong>：如果一个存储器的位置被引用，那么将来他附近的位置也会被引用。</li></ul><h1 id="二、CPU的三级缓存"><a href="#二、CPU的三级缓存" class="headerlink" title="二、CPU的三级缓存"></a>二、CPU的三级缓存</h1><h2 id="1-CPU的三级缓存"><a href="#1-CPU的三级缓存" class="headerlink" title="1. CPU的三级缓存"></a>1. CPU的三级缓存</h2><p>随着多核CPU的发展，CPU缓存通常分成了三个级别：<font color="red">L1</font>，<font color="red">L2</font>，<font color="red">L3</font>。级别越小越接近CPU，所以速度也更快，同时也代表着容量越小。L1 是最接近CPU的, 它容量最小（例如：<font color="red">32K</font>），速度最快，每个核上都有一个 L1 缓存，L1 缓存每个核上其实有两个 L1 缓存, 一个用于存数据的 L1d Cache（Data Cache），一个用于存指令的 L1i Cache（Instruction Cache）。L2 缓存 更大一些（例如：<font color="red">256K</font>），速度要慢一些, 一般情况下每个核上都有一个独立的L2 缓存; L3 缓存是三级缓存中最大的一级（例如3MB），同时也是最慢的一级, 在同一个CPU插槽之间的核共享一个 L3 缓存。</p><p>下面是三级缓存的处理速度参考表：</p><table><thead><tr><th>从CPU到</th><th>大约需要的CPU周期</th><th>大约需要的时间(单位ns)</th></tr></thead><tbody><tr><td>寄存器</td><td>1 cycle</td><td></td></tr><tr><td>L1 Cache</td><td>~3-4 cycles</td><td>~0.5-1 ns</td></tr><tr><td>L2 Cache</td><td>~10-20 cycles</td><td>~3-7 ns</td></tr></tbody></table><p>下图是Intel Core i5-4285U的CPU三级缓存示意图：<br><img src="http://static.blinkfox.com/javabf_cpu_01.png" alt="CPU三级缓存">就像数据库缓存一样，获取数据时首先会在最快的缓存中找数据，如果缓存没有命中(Cache miss) 则往下一级找, 直到三级缓存都找不到时，那只有向内存要数据了。一次次地未命中，代表取数据消耗的时间越长。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> CPU </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CPU </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>C#</title>
       <link href="2020/09/30/c-2/"/>
       <url>2020/09/30/c-2/</url>
